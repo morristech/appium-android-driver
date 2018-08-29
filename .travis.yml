@@ -5,6 +5,7 @@ addons:
     sources:
       - ubuntu-toolchain-r-test
       - llvm-toolchain-trusty-5.0
+      - kubuntu-backports
     packages:
       - g++-4.9
       - clang-5.0
