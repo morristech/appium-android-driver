@@ -20,8 +20,8 @@ before_script:
   - sudo add-apt-repository ppa:smspillaz/cmake-2.8.12 --yes
   - sudo apt-get update -q
   - sudo apt-get install cmake-data -y
-  # - sudo apt-get install cmake -y
+  - sudo apt-get install cmake -y
   - cmake --version
-  - CC=gcc-4.9 CXX=g++-4.9 npm install opencv4nodejs
+  - CC=clang-5.0 CXX=clang++-5.0  npm install opencv4nodejs
 script:
   - npm ls opencv4nodejs
