@@ -5,7 +5,6 @@ addons:
     sources:
       - ubuntu-toolchain-r-test
       - llvm-toolchain-trusty-5.0
-      - george-edison55-precise-backports
     packages:
       - g++-4.9
       - clang-5.0
@@ -20,6 +19,9 @@ before_script:
 
   - echo $CC
   - echo $CXX
+  - sudo add-apt-repository ppa:smspillaz/cmake-2.8.12 -y
+  - sudo apt-get install cmake
+  - cmake --version
   - CC=gcc-4.9 CXX=g++-4.9 npm install opencv4nodejs
 script:
   - npm ls opencv4nodejs
