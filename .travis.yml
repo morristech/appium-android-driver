@@ -18,7 +18,7 @@ before_script:
   - echo $CC
   - echo $CXX
   - sudo add-apt-repository ppa:smspillaz/cmake-2.8.12 --yes
-  - sudo apt-get update -q
+  # - sudo apt-get update -q
   - sudo apt-get install cmake-data -y
   - sudo apt-get install cmake -y
   - cmake --version
