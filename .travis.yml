@@ -7,6 +7,8 @@ before_script:
   - node --version
   - npm --version
 
+  - echo $CC
+  - echo $CXX
   - npm install opencv4nodejs
 script:
   - npm ls opencv4nodejs
