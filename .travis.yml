@@ -1,11 +1,5 @@
 language: android
 dist: precise
-addons:
-    apt:
-      sources:
-        - ubuntu-toolchain-r-test
-      packages:
-        - g++-4.9
 before_script:
   # node stuff
   - curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.1/install.sh | bash
@@ -13,6 +7,6 @@ before_script:
   - node --version
   - npm --version
 
-  - CC=gcc-4.9 CXX=g++-4.9 npm install opencv4nodejs
+  - npm install opencv4nodejs
 script:
   - npm ls opencv4nodejs
