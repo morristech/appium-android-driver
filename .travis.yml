@@ -1,5 +1,14 @@
 language: android
 dist: precise
+addons:
+  apt:
+    sources:
+    - ubuntu-toolchain-r-test
+    - smspillaz/cmake-2.8.12
+    packages:
+    - gcc-5
+    - g++-5
+    - cmake
 before_script:
   # node stuff
   - curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.1/install.sh | bash
@@ -9,6 +18,6 @@ before_script:
 
   - echo $CC
   - echo $CXX
-  - npm install opencv4nodejs
+  - CC=clang-5.0 CXX=clang++-5.0 npm install opencv4nodejs
 script:
   - npm ls opencv4nodejs
