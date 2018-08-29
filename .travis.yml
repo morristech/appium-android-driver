@@ -4,10 +4,11 @@ addons:
   apt:
     sources:
       - ubuntu-toolchain-r-test
+      - llvm-toolchain-trusty-5.0
       - george-edison55-precise-backports
     packages:
-      - gcc-5
-      - g++-5
+      - g++-4.9
+      - clang-5.0
       - cmake-data
       - cmake
 before_script:
@@ -19,6 +20,6 @@ before_script:
 
   - echo $CC
   - echo $CXX
-  - CC=clang-5.0 CXX=clang++-5.0 npm install opencv4nodejs
+  - CC=gcc-4.9 CXX=g++-4.9 npm install opencv4nodejs
 script:
   - npm ls opencv4nodejs
